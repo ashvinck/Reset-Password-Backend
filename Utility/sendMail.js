@@ -3,8 +3,9 @@ import nodemailer from "nodemailer";
 // This function takes email,userId,token
 // uses nodemailer npm and gmail service to send password reset email to the user requesting password reset
 export const sendPasswordResetMail = async (email, userId, token) => {
-    const link = `https://localhost:3000/reset-password/${userId}/${token}`
-    console.log(link)
+    // const link = `https://localhost:3000/reset-password/${userId}/${token}`
+    const link = `https://reset-password10.netlify.app/reset-password/${userId}/${token}`
+    // console.log(link)
 
     const transporter = nodemailer.createTransport({
         service: "gmail",
